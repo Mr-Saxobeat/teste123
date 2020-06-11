@@ -2,7 +2,7 @@
 <h3>Weiglas has written {{ posts.count }} blog posts</h3>
 
 {% for post in posts %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  {{ post.pub_date }}
+  <h2><a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a></h2>
+  <h5>{{ post.pub_date }}</h5>
   <p>{{ post.description }}</p>
 {% endfor %}

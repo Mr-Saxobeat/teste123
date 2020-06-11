@@ -1,4 +1,9 @@
-<h1>Portfolio Weiglas Ribeiro</h1>
+{% load static %}
+<h1>Weiglas Ribeiro's Portfolio</h1>
+<a href="{% url 'blog:home' %}">Blog</a>
+<br>
+
+<img src="{% static 'portfolio/weiglas.jpg' %}" alt="Weiglas hangloosing">
 
 {% for project in projects %}
 
