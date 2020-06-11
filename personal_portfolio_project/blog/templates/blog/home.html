@@ -1,8 +1,12 @@
-<h1>Weiglas's Blog</h1>
-<h3>Weiglas has written {{ posts.count }} blog posts</h3>
+{% extends 'portfolio/base.html' %}
 
-{% for post in posts %}
-  <h2><a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a></h2>
-  <h5>{{ post.pub_date }}</h5>
-  <p>{{ post.description }}</p>
-{% endfor %}
+{% block content %}
+  <h1>Weiglas's Blog</h1>
+  <h3>Weiglas has written {{ posts.count }} blog post{{ posts.count|pluralize }}</h3>
+
+  {% for post in posts %}
+    <h2><a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a></h2>
+    <h5>{{ post.pub_date|date:'M d y'|upper }}</h5>
+    <p>{{ post.description|striptags|truncatechars:100 }}</p>
+  {% endfor %}
+{% endblock %}

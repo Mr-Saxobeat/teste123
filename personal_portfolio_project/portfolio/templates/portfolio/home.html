@@ -1,19 +1,23 @@
-{% load static %}
-<h1>Weiglas Ribeiro's Portfolio</h1>
-<a href="{% url 'blog:home' %}">Blog</a>
-<br>
+{% extends 'portfolio/base.html' %}
 
-<img src="{% static 'portfolio/weiglas.jpg' %}" alt="Weiglas hangloosing">
+{% block content %}
+  {% load static %}
+  <h1>Weiglas Ribeiro's Portfolio</h1>
+  <a href="{% url 'blog:home' %}">Blog</a>
+  <br>
 
-{% for project in projects %}
+  <img src="{% static 'portfolio/weiglas.jpg' %}" alt="Weiglas hangloosing">
 
-  <h2>{{ project.title }}</h2>
-  <p>{{ project.description }}</p>
-  <img src="{{ project.image.url }}" height="250">
+  {% for project in projects %}
 
-  {% if project.url %}
-    <br>
-    <a href="{{ project.url }}">Link</a>
-  {% endif %}
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description }}</p>
+    <img src="{{ project.image.url }}" height="250">
 
-{% endfor %}
+    {% if project.url %}
+      <br>
+      <a href="{{ project.url }}">Link</a>
+    {% endif %}
+
+  {% endfor %}
+{% endblock %}
