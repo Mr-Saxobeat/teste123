@@ -20,9 +20,9 @@ from django.conf import settings
 from portfolio import views as portfolio_views
 
 urlpatterns = [
+    path('', portfolio_views.home, name='portfolio'),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
-    path('', portfolio_views.home, name='portfolio_home'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
