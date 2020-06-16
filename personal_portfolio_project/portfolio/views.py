@@ -8,3 +8,6 @@ def home(request):
 
 def fraude(request):
     return render(request, 'portfolio/home.html')
+
+def agathinha(request):
+    return render(request, 'portfolio/agathinha.html')

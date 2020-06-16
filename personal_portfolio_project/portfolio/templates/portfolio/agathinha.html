@@ -1,0 +1,47 @@
+{% extends 'portfolio/base2.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>Não se admire se um dia
+Um beija flor invadir
+A porta da tua casa
+Te der um beijo e partir
+Foi eu que mandei o beijo
+Que é pra matar meu desejo
+Faz tempo que eu não te vejo
+Ai que saudade d'ocê</p>
+      </div>
+    </div>
+
+
+    <div class="row" id="weiglas-img">
+      <img src="{% static 'portfolio/agatha.jpg' %}" alt="Agatha" class="img-fluid">
+    </div>
+
+
+  <!-- <div class="row text-center"> -->
+    <!-- {% for project in projects %} -->
+
+      <!-- <div class="col-md-4 col-sm-12"> -->
+        <!-- <h2>{{ project.title|truncatechars:20 }}</h2> -->
+        <!-- <p>{{ project.description|truncatechars:20 }}</p> -->
+
+        <!-- <img class="img-fluid" src="{{ project.image.url }}" height="250"> -->
+
+        <!-- {% if project.url %} -->
+          <!-- <br> -->
+          <!-- <a href="{{ project.url }}">Link</a> -->
+        <!-- {% endif %} -->
+
+      <!-- </div> -->
+    <!-- {% endfor %} -->
+  <!-- </div> -->
+</div>
+{% endblock %}
