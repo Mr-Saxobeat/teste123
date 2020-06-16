@@ -9,32 +9,32 @@
 <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1>Weiglas Ribeiro's Portfolio</h1>
+        <h1>LINDO</h1>
       </div>
     </div>
 
 
     <div class="row" id="weiglas-img">
-      <img src="{% static 'portfolio/weiglas.jpg' %}" alt="Weiglas hangloosing" class="img-fluid">
+      <img src="{% static 'portfolio/fraude.jpg' %}" alt="Weiglas hangloosing" class="img-fluid">
     </div>
 
 
-  <div class="row text-center">
-    {% for project in projects %}
+  <!-- <div class="row text-center"> -->
+    <!-- {% for project in projects %} -->
 
-      <div class="col-md-4 col-sm-12">
-        <h2>{{ project.title|truncatechars:20 }}</h2>
+      <!-- <div class="col-md-4 col-sm-12"> -->
+        <!-- <h2>{{ project.title|truncatechars:20 }}</h2> -->
         <!-- <p>{{ project.description|truncatechars:20 }}</p> -->
 
-        <img class="img-fluid" src="{{ project.image.url }}" height="250">
+        <!-- <img class="img-fluid" src="{{ project.image.url }}" height="250"> -->
 
-        {% if project.url %}
-          <br>
-          <a href="{{ project.url }}">Link</a>
-        {% endif %}
+        <!-- {% if project.url %} -->
+          <!-- <br> -->
+          <!-- <a href="{{ project.url }}">Link</a> -->
+        <!-- {% endif %} -->
 
-      </div>
-    {% endfor %}
-  </div>
+      <!-- </div> -->
+    <!-- {% endfor %} -->
+  <!-- </div> -->
 </div>
 {% endblock %}
