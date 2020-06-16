@@ -23,8 +23,12 @@ urlpatterns = [
     path('', portfolio_views.home, name='portfolio'),
     # path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
+<<<<<<< HEAD
     path('fraude/', portfolio_views.fraude, name='fraude'),
     path('agathinha/', portfolio_views.agathinha, name='agathinha'),
+=======
+    path('fraude/', portfolio_views.fraude, name='fraude')
+>>>>>>> 171912b1ad87cf44a656baf5b6edbfb307bc7c67
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
